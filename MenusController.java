@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import com.example.demo.Form.CreateForm;
+import com.example.demo.Form.UpdateForm;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -31,7 +33,7 @@ public class MenusController {
     }
 
     @DeleteMapping("/menus/{id}")
-    public ResponseEntity<Map<String, String>> deleteMenu(@PathVariable("id") int id, @RequestBody DeleteForm form) {
+    public ResponseEntity<Map<String, String>> deleteMenu(@PathVariable("id") int id) {
         return ResponseEntity.ok(Map.of("message", "menu successfully deleted"));
     }
 }
