@@ -10,7 +10,7 @@ import java.util.Map;
 @RestController
 public class MenusInfoDeleteController {
 
-    @DeleteMapping("/menusInfo/{id}")
+    @DeleteMapping("/menus/{id}")
     public ResponseEntity<Map<String, String>> deleteMenu(@PathVariable("id") int id) {
         return ResponseEntity.ok(Map.of("message", "menusInfo successfully deleted"));
     }
