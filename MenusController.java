@@ -13,26 +13,26 @@ import java.util.Map;
 @RestController
 public class MenusController {
 
-    @GetMapping("/menus")
+    @GetMapping("/menusInfo")
     public List<String> getMenus() {
         return List.of("POP CORN", "DRINK");
     }
 
-    @PostMapping("/menus")
+    @PostMapping("/menusInfo")
     public ResponseEntity<String> createMenu(@RequestBody CreateForm form) {
         URI url = UriComponentsBuilder.fromUriString("http://localhost:8080")
-                .path("/menus/id")
+                .path("/menusInfo/id")
                 .build()
                 .toUri();
         return ResponseEntity.created(url).body("menu successfully created");
     }
 
-    @PatchMapping("/menus/{id}")
+    @PatchMapping("/menusInfo/{id}")
     public ResponseEntity<Map<String, String>> updateMenu(@PathVariable("id") int id, @RequestBody UpdateForm form) {
         return ResponseEntity.ok(Map.of("message", "menu successfully updated"));
     }
 
-    @DeleteMapping("/menus/{id}")
+    @DeleteMapping("/menusInfo/{id}")
     public ResponseEntity<Map<String, String>> deleteMenu(@PathVariable("id") int id) {
         return ResponseEntity.ok(Map.of("message", "menu successfully deleted"));
     }
