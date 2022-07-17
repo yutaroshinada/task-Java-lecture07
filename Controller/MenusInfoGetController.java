@@ -12,9 +12,7 @@ public class MenusGetController {
 
     @GetMapping("/menus")
     public List<Menus> getMenus(@RequestParam(name = "menus",value = "menus", required = true) String menus) {
-            return List.of(
-                   new Menus("POP CORN", 380),
-                    new Menus("DRINK", 380));
+            return List.of(new Menus("POP CORN", 380), new Menus("DRINK", 380));
         }
 
 }
