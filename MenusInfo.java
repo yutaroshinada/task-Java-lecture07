@@ -1,10 +1,10 @@
 package com.example.demo;
 
-public class MenusInfo {
+public class Menus {
     private String menu;
     private int price;
 
-    public MenusInfo(String menu, int price) {
+    public Menus(String menu, int price) {
         this.menu = menu;
         this.price = price;
     }
