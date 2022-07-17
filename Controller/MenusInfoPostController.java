@@ -12,14 +12,14 @@ import java.net.URI;
 import java.util.Map;
 
 @RestController
-public class MenusInfoPostController {
+public class MenusPostController {
 
-    @PostMapping("/menusInfo")
+    @PostMapping("/menus")
     public ResponseEntity<Map<String, String>> createMenu(@RequestBody @Validated CreateForm form) {
         URI url = UriComponentsBuilder.fromUriString("http://localhost:8080")
-                .path("/menusInfo/id")
+                .path("/menus/id")
                 .build()
                 .toUri();
-        return ResponseEntity.created(url).body(Map.of("Message","menusInfo successfully created"));
+        return ResponseEntity.created(url).body(Map.of("Message","menus successfully created"));
     }
 }
