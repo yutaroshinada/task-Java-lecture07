@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-public class MenusInfoDeleteController {
+public class MenusDeleteController {
 
     @DeleteMapping("/menus/{id}")
     public ResponseEntity<Map<String, String>> deleteMenu(@PathVariable("id") int id) {
-        return ResponseEntity.ok(Map.of("message", "menusInfo successfully deleted"));
+        return ResponseEntity.ok(Map.of("message", "menus successfully deleted"));
     }
 }
