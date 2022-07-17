@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-public class MenusInfoPatchController {
+public class MenusPatchController {
 
-    @PatchMapping("/menusInfo/{id}")
+    @PatchMapping("/menus/{id}")
     public ResponseEntity<Map<String, String>> updateMenu(@PathVariable("id") int id, @Validated @RequestBody UpdateForm form) {
-        return ResponseEntity.ok(Map.of("message", "menusInfo successfully updated"));
+        return ResponseEntity.ok(Map.of("message", "menus successfully updated"));
     }
 }
