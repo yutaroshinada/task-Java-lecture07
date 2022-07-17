@@ -1,11 +1,19 @@
 package com.example.demo.Form;
 
-import org.springframework.lang.NonNull;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.Range;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 public class UpdateForm {
-    @NonNull
+    @NotNull
+    @NotBlank
+    @Length(max = 20)
     private String menu;
-    @NonNull
+    @NotNull
+    @Range(min = 1, max = 9999)
     private int price;
 
 
